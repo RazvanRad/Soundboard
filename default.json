@@ -1,0 +1,18 @@
+{
+
+	"buttonID":[
+		{
+			"1":"default1"
+		},
+		{
+			"2":"default2"
+		},
+		{
+			"3":"default3"
+		},
+		{
+			"4":"default4"
+		}
+	],
+	"transferProtocol":"default"
+}

@@ -1,0 +1,9 @@
+{
+
+	"buttonID":
+	{
+		"1":"path/to/sound1",
+		"2":"path/to/sound2"
+	},
+	"transferProtocol":"bluetooth"
+}

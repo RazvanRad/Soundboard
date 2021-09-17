@@ -1,5 +1,26 @@
+### VisualStudioCode ###
+.vscode/*  
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+**/.history
+
+# CMake
+CMakeFiles/
+_deps/
+build/
+Temporary/
+Makefile
+
+*.cmake
+
 # Prerequisites
 *.d
+temp/
+
+# Ignore Hidden Files
+.*
+!/.gitignore
 
 # Compiled Object files
 *.slo
