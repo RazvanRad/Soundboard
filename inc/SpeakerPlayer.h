@@ -6,9 +6,9 @@
 class SpeakerPlayer : public IPlayer{
 
 public:
-    virtual void playSound()
+    virtual void playSound(int index)
     {
-
+        
     }
 
 };

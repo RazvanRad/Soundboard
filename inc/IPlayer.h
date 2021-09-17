@@ -4,7 +4,7 @@
 class IPlayer{
 
 public:
-    virtual void playSound() = 0;
+    virtual void playSound(int index) = 0;
 
 };
 #endif
