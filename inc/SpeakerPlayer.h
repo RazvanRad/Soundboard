@@ -7,7 +7,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_mixer.h>
 #include "IPlayer.h"
-#include "jsonParser.h"
+#include "JsonParser.h"
 
 #define AUDIO_RATE 22050
 #define AUDIO_FORMAT AUDIO_S16SYS

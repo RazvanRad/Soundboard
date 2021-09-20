@@ -1,12 +1,12 @@
 #ifndef JSONPARSER_H
 #define JSONPARSER_H
+
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 
 #include <map>
 #include <string>
 #include <vector>
-
 
 namespace pt = boost::property_tree;
 
@@ -26,8 +26,8 @@ private:
     // map[2] = "path/to/sound2"
     std::map<int, std::string> pathById;
     pt::ptree root;
-    // 0 = bluetooth
-    // 1 = netcat
+   
+    //  0 = bluetooth   1 = netcat
     int transferProtocol = 0;
     int buttonCount = 0;
 };

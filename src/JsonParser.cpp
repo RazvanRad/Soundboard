@@ -1,4 +1,5 @@
 #include "JsonParser.h"
+
 JsonParser::JsonParser(const std::string &filename)
 {
     if (filename.length() > 0)
