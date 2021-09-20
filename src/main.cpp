@@ -1,6 +1,6 @@
-#include "JsonParser.h"
-#include "SoundBoard.h"
-#include "ErrorCodes.cpp"
+#include <JsonParser.h>
+#include <SoundBoard.h>
+#include <ErrorCodes.h>
 #include <iostream>
 
 int main()
