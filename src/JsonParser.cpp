@@ -18,13 +18,14 @@ std::string JsonParser::getSoundPathByButtonID(int id)
     {
         return pathById[id];
     }
-
-    if (pathById.empty())
+    //if we get here the button does not exist
+    if (!pathById.empty())
     {
-        throw 2000001;
+        return("");
+        
     }
-
-    throw 2000000;
+    //if we get here the map is empty
+    return("");
 }
 
 int JsonParser::getProtocol() const

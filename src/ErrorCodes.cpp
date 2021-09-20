@@ -5,15 +5,11 @@ void printError(int error)
     switch (error)
     {
     case 2000000:
-        std::cout << "A button does not exist" << std::endl;
-        break;
-
-    case 2000001:
-        std::cout << "There are no buttons." << std::endl;
+        std::cout << "This is an example" << std::endl;
         break;
 
     default:
-        std::cout << "encountered error " << error;
+        std::cout << "Encountered unknown error " << error;
         break;
     }
 }
