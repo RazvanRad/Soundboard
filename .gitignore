@@ -52,3 +52,5 @@ temp/
 *.exe
 *.out
 *.app
+
+build/**
