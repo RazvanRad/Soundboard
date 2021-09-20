@@ -6,9 +6,9 @@
 class MicrophonePlayer : public IPlayer
 {
 public:
-    virtual int playSound(int index)
+    virtual void playSound(int index)
     {
-        return 0;
+
     }
 };
 #endif
