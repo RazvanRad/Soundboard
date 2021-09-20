@@ -5,7 +5,7 @@
 # CMake
 CMakeFiles/
 _deps/
-build/**
+build/
 Temporary/
 Makefile
 *.cmake
