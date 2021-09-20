@@ -1,8 +1,5 @@
-### VisualStudioCode ###
+# VSCode
 .vscode/*  
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
 **/.history
 
 # CMake
@@ -11,12 +8,16 @@ _deps/
 build/
 Temporary/
 Makefile
-
 *.cmake
 
 # Prerequisites
 *.d
 temp/
+
+# Ignore all files without extension
+*
+!*/
+!*.*
 
 # Ignore Hidden Files
 .*
