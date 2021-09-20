@@ -1,10 +1,19 @@
-#include "jsonParser.h"
+#include "JsonParser.h"
 #include "SoundBoard.h"
+#include "ErrorCodes.cpp"
 #include <iostream>
 int main()
 {
-    std::string file = "config.json";
+    try
+    {
+        std::string file = "config.json";
 
-    JsonParser parser(file);
-    std::cout << parser.getSoundPathByButtonID(1) << std::endl;
+        JsonParser parser(file);
+
+        std::cout << parser.getSoundPathByButtonID(1) << std::endl;
+    }
+    catch (int error)
+    {
+        printError(error);
+    }
 }
