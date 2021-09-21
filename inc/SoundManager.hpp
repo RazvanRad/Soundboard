@@ -1,7 +1,7 @@
-#ifndef SOUNDMANAGER_H_
-#define SOUNDMANAGER_H_
+#ifndef SOUNDBOARD_SOUND_MANAGER_H_
+#define SOUNDBOARD_SOUND_MANAGER_H_
 
-#include "IPlayer.h"
+#include "IPlayer.hpp"
 #include <vector>
 
 class SoundManager

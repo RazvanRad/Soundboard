@@ -1,4 +1,4 @@
-#include "SpeakerPlayer.h"
+#include <SpeakerPlayer.hpp>
 
 SpeakerPlayer::SpeakerPlayer()
 {

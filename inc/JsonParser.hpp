@@ -1,5 +1,5 @@
-#ifndef JSONPARSER_H
-#define JSONPARSER_H
+#ifndef SOUNDBOARD_JSONPARSER_H
+#define SOUNDBOARD_JSONPARSER_H
 
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>

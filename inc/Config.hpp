@@ -1,5 +1,6 @@
-#ifndef CONFIG_H_
-#define CONFIG_H_
+#ifndef SOUNDBOARD_CONFIG_H_
+#define SOUNDBOARD_CONFIG_H_
+
 #include <map>
 #include <string>
 
@@ -12,4 +13,5 @@ public:
 private:
     std::map<int, std::string> pathById;
 };
+
 #endif

@@ -52,4 +52,5 @@ temp/
 *.out
 *.app
 
+build/
 build/**

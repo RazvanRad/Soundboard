@@ -1,18 +1,24 @@
 #include <BluetoothWrapper.h>
-#include <BluetoothListener.h>
+#include <BluetoothListener.hpp>
+
 #include <thread>
 
 void BluetoothListener::start(Handler handler)
 {
-    active = 1;
-    std::thread thr(start_socket, handler, &active);
+    _active = 1;
+    std::thread thr(start_socket, handler, &_active);
     thr.detach();
     bthread = std::move(thr);
 }
 
 void BluetoothListener::stop()
 {
-    active = 0;
+    _active = 0;
     if (bthread.joinable())
         bthread.join();
+}
+
+int BluetoothListener::active() const
+{
+    return _active;
 }

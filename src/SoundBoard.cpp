@@ -1,4 +1,4 @@
-#include "SoundBoard.h"
+#include <SoundBoard.hpp>
 
 SoundBoard::SoundBoard()
 {

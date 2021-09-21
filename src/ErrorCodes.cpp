@@ -1,5 +1,5 @@
 #include <iostream>
-#include <ErrorCodes.h>
+#include <ErrorCodes.hpp>
 
 void printError(int error)
 {
