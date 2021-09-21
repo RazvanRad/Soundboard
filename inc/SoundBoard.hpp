@@ -1,8 +1,8 @@
 #ifndef SOUNDBOARD_H_
 #define SOUNDBOARD_H_
 
-#include "Config.h"
-#include "SoundManager.h"
+#include "Config.hpp"
+#include "SoundManager.hpp"
 
 class SoundBoard{
 

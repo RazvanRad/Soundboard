@@ -1,7 +1,7 @@
-#ifndef MICROPHONEPLAYER_H_
-#define MICROPHONEPLAYER_H_
+#ifndef SOUNDBOARD_MICROPHONE_PLAYER_H_
+#define SOUNDBOARD_MICROPHONE_PLAYER_H_
 
-#include "IPlayer.h"
+#include "IPlayer.hpp"
 
 class MicrophonePlayer : public IPlayer
 {

@@ -1,13 +1,13 @@
-#ifndef SPEAKERPLAYER_H_
-#define SPEAKERPLAYER_H_
+#ifndef SOUNDBOARD_SPEAKER_PLAYER_H_
+#define SOUNDBOARD_SPEAKER_PLAYER_H_
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_mixer.h>
-#include "IPlayer.h"
-#include "JsonParser.h"
+#include <IPlayer.hpp>
+#include <JsonParser.hpp>
 
 #define AUDIO_RATE 22050
 #define AUDIO_FORMAT AUDIO_S16SYS

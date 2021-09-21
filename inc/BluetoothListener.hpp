@@ -1,11 +1,11 @@
 #ifndef SOUNDBOARD_BLUETOOTH_LISTENER
 #define SOUNDBOARD_BLUETOOTH_LISTENER
 
-#include <Listener.h>
+#include <IListener.hpp>
 #include <vector>
 #include <thread>
 
-class BluetoothListener : public Listener
+class BluetoothListener : public IListener
 {
 private:
     std::thread bthread;

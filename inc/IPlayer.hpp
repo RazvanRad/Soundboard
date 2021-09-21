@@ -1,5 +1,5 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef SOUNDBOARD_PLAYER_H
+#define SOUNDBOARD_PLAYER_H
 
 class IPlayer{
 

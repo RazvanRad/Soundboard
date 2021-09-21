@@ -1,8 +1,8 @@
-#include <JsonParser.h>
-#include <SoundBoard.h>
-#include <ErrorCodes.h>
+#include <JsonParser.hpp>
+#include <SoundBoard.hpp>
+#include <ErrorCodes.hpp>
 #include <iostream>
-#include <BluetoothListener.h>
+#include <BluetoothListener.hpp>
 #include <thread>
 #include <chrono>
 

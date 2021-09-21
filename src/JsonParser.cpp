@@ -1,4 +1,4 @@
-#include "JsonParser.h"
+#include <JsonParser.hpp>
 
 JsonParser::JsonParser(const std::string &filename)
 {

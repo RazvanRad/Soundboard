@@ -1,11 +1,9 @@
-#ifndef SOUNDBOARD_LISTENER
-#define SOUNDBOARD_LISTENER
-
-#include <functional>
+#ifndef SOUNDBOARD_LISTENER_H_
+#define SOUNDBOARD_LISTENER_H_
 
 typedef void(*Handler)(int);
 
-class Listener
+class IListener
 {
 public:
     virtual void start(Handler handler) = 0;
