@@ -19,6 +19,7 @@ public:
     std::string getSoundPathByButtonID(int id);
     int getProtocol() const;
     int getButtonCount() const;
+    std::map<int,std::string> getConfig() const;
 
 private:
     JsonParser();

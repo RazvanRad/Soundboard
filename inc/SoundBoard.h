@@ -3,13 +3,15 @@
 
 #include "Config.h"
 #include "SoundManager.h"
+#include <map>
 
 class SoundBoard
 {
 public:
     SoundBoard();
+    void initUsingConfig(std::map<int,std::string> pathById);
+    
 private:
-    void init();
     void run();
     Config configFile;
     SoundManager audioManager;

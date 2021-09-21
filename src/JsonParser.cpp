@@ -12,7 +12,10 @@ JsonParser::JsonParser(const std::string &filename)
         JsonParser();
     }
 }
-
+std::map<int,std::string> JsonParser::getConfig() const
+{
+    return pathById;
+}
 std::string JsonParser::getSoundPathByButtonID(int id)
 {
     if (pathById.find(id) != pathById.end())

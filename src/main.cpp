@@ -4,24 +4,28 @@
 #include <iostream>
 int main()
 {
-    /////////////////////////
-    // load json elements  //
-    /////////////////////////
     try
     {
+
+        /////////////////////////
+        // load json elements  //
+        /////////////////////////
+        
         std::string file = "config.json";
         JsonParser parser(file);
 
         // Remember to check for "" as return value for getSoundPathByButtonID
         std::cout << parser.getSoundPathByButtonID(1) << std::endl;
+
+        /////////////////////////
+        //initialize soundbaord//
+        /////////////////////////
+
+        SoundBoard soundboard1;
+        soundboard1.initUsingConfig(parser.getConfig());
     }
     catch (int error)
     {
         printError(error);
     }
-
-    /////////////////////////
-    //initialize soundbaord//
-    /////////////////////////
-    SoundBoard soundboard1;
 }
