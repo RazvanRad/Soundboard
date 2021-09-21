@@ -10,19 +10,16 @@ unzip_sdl(){
 }
 
 install_sdl2(){
-    
     cd SDL2-2.0.16
     mkdir build
     cd build
     ../configure
     make all
     sudo make install
-    echo SE TERMINA PRIMA FUNCTIE!!!
     cd ../../..
 }
 
 install_sdl_mixer(){
-    echo INCEPE A DOUA FUNCTIE!!!!!!
     cd ${TMP}/SDL2_mixer-2.0.4
     mkdir build
     cd build
@@ -30,6 +27,12 @@ install_sdl_mixer(){
     make all
     sudo make install
     cd ../..
+}
+
+bluetooth_config(){
+    sudo apt-get install libbluetooth-dev python-dev libglib2.0-dev libboost-python-dev libboost-thread-dev
+    sudo apt install bluez
+    sudo pip3 install pybluez
 }
 
 ################
@@ -45,9 +48,6 @@ copy_music
 unzip_sdl
 install_sdl_mixer
 install_sdl2
+bluetooth_config
 
 rm -r tmp
-
-
-
-#Nu merge al doilea zip  
