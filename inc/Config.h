@@ -5,6 +5,6 @@ class Config
 {
 
 public:
-
+private:
 };
 #endif

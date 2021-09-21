@@ -22,7 +22,7 @@ public:
 
 private:
     JsonParser();
-    void initButtonIdToPath();
+    void init();
     // map[2] = "path/to/sound2"
     std::map<int, std::string> pathById;
     pt::ptree root;

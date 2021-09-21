@@ -8,7 +8,8 @@ class MicrophonePlayer : public IPlayer
 public:
     virtual void playSound(int index)
     {
-
     }
+
+private:
 };
 #endif

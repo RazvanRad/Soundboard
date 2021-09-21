@@ -2,9 +2,11 @@
 #include <SoundBoard.h>
 #include <ErrorCodes.h>
 #include <iostream>
-
 int main()
 {
+    /////////////////////////
+    // load json elements  //
+    /////////////////////////
     try
     {
         std::string file = "config.json";
@@ -17,4 +19,9 @@ int main()
     {
         printError(error);
     }
+
+    /////////////////////////
+    //initialize soundbaord//
+    /////////////////////////
+    SoundBoard soundboard1;
 }

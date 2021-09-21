@@ -4,13 +4,15 @@
 #include "Config.h"
 #include "SoundManager.h"
 
-class SoundBoard{
-
-Config configFile;
-SoundManager audioManager;
-
+class SoundBoard
+{
 public:
-
+    SoundBoard();
+private:
+    void init();
+    void run();
+    Config configFile;
+    SoundManager audioManager;
 };
 
 #endif
