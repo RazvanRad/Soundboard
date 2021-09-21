@@ -5,7 +5,6 @@
 # CMake
 CMakeFiles/
 _deps/
-build/
 Temporary/
 Makefile
 *.cmake
@@ -52,3 +51,5 @@ temp/
 *.exe
 *.out
 *.app
+
+build/**
