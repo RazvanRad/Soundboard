@@ -19,10 +19,11 @@ public:
     std::string getSoundPathByButtonID(int id);
     int getProtocol() const;
     int getButtonCount() const;
+    std::map<int,std::string> getConfig() const;
 
 private:
     JsonParser();
-    void initButtonIdToPath();
+    void init();
     // map[2] = "path/to/sound2"
     std::map<int, std::string> pathById;
     pt::ptree root;

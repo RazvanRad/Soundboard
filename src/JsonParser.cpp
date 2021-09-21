@@ -5,14 +5,17 @@ JsonParser::JsonParser(const std::string &filename)
     if (filename.length() > 0)
     {
         pt::read_json(filename, root);
-        initButtonIdToPath();
+        init();
     }
     else
     {
         JsonParser();
     }
 }
-
+std::map<int,std::string> JsonParser::getConfig() const
+{
+    return pathById;
+}
 std::string JsonParser::getSoundPathByButtonID(int id)
 {
     if (pathById.find(id) != pathById.end())
@@ -37,10 +40,10 @@ int JsonParser::getProtocol() const
 JsonParser::JsonParser()
 {
     pt::read_json("default.json", root);
-    initButtonIdToPath();
+    init();
 }
 
-void JsonParser::initButtonIdToPath()
+void JsonParser::init()
 {
     for (pt::ptree::value_type &btn : root.get_child("buttonID"))
     {

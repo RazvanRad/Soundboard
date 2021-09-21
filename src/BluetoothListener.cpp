@@ -1,5 +1,6 @@
 #include <BluetoothWrapper.h>
 #include <BluetoothListener.hpp>
+
 #include <thread>
 
 void BluetoothListener::start(Handler handler)

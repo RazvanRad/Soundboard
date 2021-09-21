@@ -5,6 +5,6 @@ class IPlayer{
 
 public:
     virtual void playSound(int index) = 0;
-
+private:
 };
 #endif
