@@ -21,7 +21,9 @@ int main()
         std::cout << parser.getSoundPathByButtonID(1) << std::endl; */
         BluetoothListener listener;
         listener.start(print_int);
-        std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+        //std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+        while(1)
+        {}
     }
     catch (int error)
     {

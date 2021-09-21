@@ -9,11 +9,11 @@
 
 void start_socket(void (*handler)(int), int *active)
 {
-    while(*active)
+    /*while(*active)
     {
         handler(121);
     }
-    return;
+    return;*/
     struct sockaddr_rc loc_addr = { 0 }, rem_addr = { 0 };
     char buf[1024] = { 0 };
     int s, client, bytes_read;
