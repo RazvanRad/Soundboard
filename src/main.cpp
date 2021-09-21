@@ -6,28 +6,27 @@
 #include <thread>
 #include <chrono>
 
-void print_int(int num)
-{
-    std::cout << "Num is " << num << std::endl;
-}
 int main()
 {
     try
     {
-        /* std::string file = "config.json";
+
+        /////////////////////////
+        // load json elements  //
+        /////////////////////////
+        
+        std::string file = "config.json";
         JsonParser parser(file);
 
         // Remember to check for "" as return value for getSoundPathByButtonID
-        std::cout << parser.getSoundPathByButtonID(1) << std::endl; */
-        BluetoothListener listener;
-        listener.start(print_int);
-<<<<<<< HEAD
-        //std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-        while(1)
-        {}
-=======
-        std::this_thread::sleep_for(std::chrono::milliseconds(5000));
->>>>>>> main
+        std::cout << parser.getSoundPathByButtonID(1) << std::endl;
+
+        /////////////////////////
+        //initialize soundbaord//
+        /////////////////////////
+
+        SoundBoard soundboard1;
+        soundboard1.initUsingConfig(parser.getConfig());
     }
     catch (int error)
     {
