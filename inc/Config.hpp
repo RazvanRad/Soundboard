@@ -4,6 +4,8 @@
 #include <map>
 #include <string>
 
+#include <JsonParser.hpp>
+
 class Config
 {
 

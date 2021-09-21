@@ -2,8 +2,9 @@
 #define SOUNDBOARD_BLUETOOTH_LISTENER
 
 #include <IListener.hpp>
-#include <vector>
+
 #include <thread>
+#include <vector>
 
 class BluetoothListener : public IListener
 {
