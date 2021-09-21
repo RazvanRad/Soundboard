@@ -10,7 +10,8 @@ void SoundBoard::run()
     {
     }
 }
-void SoundBoard::init(std::string filename)
+
+void SoundBoard::init(std::string& filename)
 {
     configFile.loadConfig(filename);
 }

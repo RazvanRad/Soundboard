@@ -8,7 +8,7 @@ class Config
 {
 
 public:
-    void loadConfig(std::string filename);
+    void loadConfig(std::string &filename);
 
 private:
     std::map<int, std::string> pathById;

@@ -11,7 +11,7 @@ class SoundBoard
 public:
     SoundBoard();
 
-    void init(std::string file);
+    void init(std::string &file);
 private:
     void run();
     Config configFile;
