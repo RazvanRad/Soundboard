@@ -5,7 +5,7 @@
 void BluetoothListener::start(Handler handler)
 {
     _active = 1;
-    std::thread thr(start_socket, handler, &active);
+    std::thread thr(start_socket, handler, &_active);
     thr.detach();
     bthread = std::move(thr);
 }

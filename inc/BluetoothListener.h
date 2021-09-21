@@ -13,9 +13,9 @@ private:
 public:
     void start(Handler handler);
     void stop();
-    bool active() const
+    int active() const
     {
-        return active;
+        return _active;
     }
 };
 
