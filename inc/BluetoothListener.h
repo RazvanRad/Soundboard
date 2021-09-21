@@ -9,10 +9,14 @@ class BluetoothListener : public Listener
 {
 private:
     std::thread bthread;
-    int active;
+    int _active;
 public:
     void start(Handler handler);
     void stop();
+    bool active() const
+    {
+        return active;
+    }
 };
 
 #endif
