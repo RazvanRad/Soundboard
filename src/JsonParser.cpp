@@ -12,7 +12,7 @@ JsonParser::JsonParser(const std::string &filename)
         JsonParser();
     }
 }
-std::map<int,std::string> JsonParser::getConfig() const
+std::map<int,std::string> JsonParser::getConfig()
 {
     return pathById;
 }

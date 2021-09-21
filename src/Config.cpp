@@ -1,6 +1,9 @@
 #include <Config.hpp>
+#include <JsonParser.hpp>
 
-void Config::loadConfig(std::map<int,std::string> pathById)
+void Config::loadConfig(std::string filename)
 {
-    this->pathById = pathById;
+    JsonParser parsedInfo(filename);
+
+    pathById = parsedInfo.getConfig();
 }

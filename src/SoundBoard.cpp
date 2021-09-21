@@ -4,16 +4,13 @@ SoundBoard::SoundBoard()
 {
 }
 
-void SoundBoard::initUsingConfig(std::map<int,std::string> pathById)
-{
-    this->configFile.loadConfig(pathById);
-    //pass everything needed to the config
- 
-}
-
 void SoundBoard::run()
 {
     while (true)
     {
     }
+}
+void SoundBoard::init(std::string filename)
+{
+    configFile.loadConfig(filename);
 }
