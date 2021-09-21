@@ -13,10 +13,7 @@ private:
 public:
     void start(Handler handler);
     void stop();
-    int active() const
-    {
-        return _active;
-    }
+    int active() const;
 };
 
 #endif

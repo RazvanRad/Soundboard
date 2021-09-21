@@ -16,3 +16,8 @@ void BluetoothListener::stop()
     if (bthread.joinable())
         bthread.join();
 }
+
+int BluetoothListener::active() const
+{
+    return _active;
+}
