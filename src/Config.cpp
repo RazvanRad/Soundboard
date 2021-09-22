@@ -11,6 +11,7 @@ int Config::getProtocol() const
 {
     return data.transferProtocol;
 }
+
 int Config::getButtonCount() const
 {
     return data.buttonCount;

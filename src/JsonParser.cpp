@@ -14,9 +14,8 @@ JsonParser::JsonParser(const std::string &filename)
     }
     init();
 }
-JsonParser::JsonParser()
-{
-}
+
+JsonParser::JsonParser() {}
 
 void JsonParser::init()
 {
@@ -48,6 +47,5 @@ void JsonParser::init()
 
 ConfigData JsonParser::getConfigData()
 {
-
     return data;
 }
