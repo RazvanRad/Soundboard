@@ -6,7 +6,6 @@
 
 #include <Config.hpp>
 #include <SoundManager.hpp>
-
 class SoundBoard
 {
 public:

@@ -1,10 +1,22 @@
 #include <SoundBoard.hpp>
+#include <iostream>
+
+#include <BluetoothListener.hpp>
 
 SoundBoard::SoundBoard() {}
+
+void playSound(int i)
+{
+    std::cout << i;
+}
 
 void SoundBoard::run()
 {
     //obiect bluetooth listener
+    BluetoothListener listener;
+    
+    //Implement playSound (pt stefan)
+    listener.start(playSound);
 
     while (true)
     {
