@@ -14,7 +14,7 @@ private:
 public:
     void start(Handler handler);
     void stop();
-    int active() const;
+    int isActive() const;
 };
 
 #endif
