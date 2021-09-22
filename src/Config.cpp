@@ -36,3 +36,8 @@ int Config::getBluetoothPort() const
 {
     return data.bluetoothPort;
 }
+
+std::vector<std::string> Config::getPlayers() const
+{
+    return data.players;
+}

@@ -22,6 +22,7 @@ struct ConfigData
     int transferProtocol = -1;
     int buttonCount = -1;
     int bluetoothPort = -1;
+    std::vector<std::string> players;
 };
 
 

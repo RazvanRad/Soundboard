@@ -45,6 +45,11 @@ void JsonParser::init()
     }
 
     data.bluetoothPort = root.get<int>("bluetoothPort", 1);
+
+    for (pt::ptree::value_type &element : root.get_child("player"))
+    {
+        data.players.push_back(element.second.data());
+    }
 }
 
 ConfigData JsonParser::getConfigData()

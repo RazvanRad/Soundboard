@@ -1,12 +1,14 @@
 {
 
-	"buttonID":
-	{
-		"1":"~/Music/Applause",
-		"2":"~/Music/Dog",
-		"3":"~/Music/Drum"
+	"buttonID": {
+		"1": "~/Music/Applause",
+		"2": "~/Music/Dog",
+		"3": "~/Music/Drum"
 
 	},
-	"transferProtocol":"bluetooth",
-	"bluetoothPort":"1"
+
+	"player": ["micplayer", "speakerplayer"],
+
+	"transferProtocol": "bluetooth",
+	"bluetoothPort": "1"
 }

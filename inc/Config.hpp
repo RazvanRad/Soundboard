@@ -16,6 +16,7 @@ public:
     int getButtonCount() const;
     int getProtocol() const;
     int getBluetoothPort() const;
+    std::vector<std::string> getPlayers() const;
 private:
     ConfigData data;
 };
