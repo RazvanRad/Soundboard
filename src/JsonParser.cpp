@@ -46,7 +46,7 @@ void JsonParser::init()
     }
 }
 
-ConfigData &JsonParser::getConfigData()
+ConfigData JsonParser::getConfigData()
 {
 
     return data;

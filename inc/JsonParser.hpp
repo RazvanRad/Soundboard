@@ -29,7 +29,7 @@ class JsonParser
 public:
     JsonParser(const std::string &filename);
 
-    ConfigData& getConfigData();
+    ConfigData getConfigData();
 
 private:
     JsonParser();
