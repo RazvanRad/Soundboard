@@ -11,7 +11,7 @@ SpeakerPlayer::~SpeakerPlayer()
 
 void SpeakerPlayer::init(const std::string &path)
 {
-    JsonParser parser(path);
+    Config conf;
 
     SDL_Init(SDL_INIT_AUDIO);
 
@@ -22,7 +22,7 @@ void SpeakerPlayer::init(const std::string &path)
 
     for (int i = 0; i < NUMBER_OF_BUTTONS; i++)
     {
-        Mix_Chunk *tmpChunck = Mix_LoadWAV(parser.getSoundPathByButtonID(i).c_str());
+        Mix_Chunk *tmpChunck = Mix_LoadWAV(conf.getSoundPathByButtonID(i).c_str());
 
         if (tmpChunck != nullptr)
         {
