@@ -31,3 +31,8 @@ std::string Config::getSoundPathByButtonID(int id)
     //if we get here the map is empty
     return ("");
 }
+
+int Config::getBluetoothPort() const
+{
+    return data.bluetoothPort;
+}

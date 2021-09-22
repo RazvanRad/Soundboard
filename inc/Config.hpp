@@ -15,7 +15,7 @@ public:
     std::string getSoundPathByButtonID(int id);
     int getButtonCount() const;
     int getProtocol() const;
-
+    int getBluetoothPort() const;
 private:
     ConfigData data;
 };

@@ -43,6 +43,8 @@ void JsonParser::init()
     {
         printf("Protocol not found!");
     }
+
+    data.bluetoothPort = root.get<int>("bluetoothPort", 1);
 }
 
 ConfigData JsonParser::getConfigData()

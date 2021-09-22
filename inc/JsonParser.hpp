@@ -21,6 +21,7 @@ struct ConfigData
     std::map<int, std::string> pathById;
     int transferProtocol = -1;
     int buttonCount = -1;
+    int bluetoothPort = -1;
 };
 
 

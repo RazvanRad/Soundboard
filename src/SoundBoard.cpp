@@ -4,12 +4,14 @@ SoundBoard::SoundBoard() {}
 
 void SoundBoard::run()
 {
+    //obiect bluetooth listener
 
     while (true)
     {
         //wait for input from the raspberry pi
         std::this_thread::sleep_for(std::chrono::milliseconds(20));
         //handle input
+
     }
 }
 

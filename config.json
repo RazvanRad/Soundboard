@@ -7,5 +7,6 @@
 		"3":"~/Music/Drum"
 
 	},
-	"transferProtocol":"bluetooth"
+	"transferProtocol":"bluetooth",
+	"bluetoothPort":"1"
 }
