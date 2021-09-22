@@ -10,4 +10,6 @@ int main()
 
     SoundBoard soundboard;
     soundboard.init(file);
+    
+    soundboard.run();
 }

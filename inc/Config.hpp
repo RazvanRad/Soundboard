@@ -12,8 +12,12 @@ class Config
 public:
     void loadConfig(std::string &filename);
 
+    std::string getSoundPathByButtonID(int id);
+    int getButtonCount() const;
+    int getProtocol() const;
+
 private:
-    std::map<int, std::string> pathById;
+    ConfigData data;
 };
 
 #endif

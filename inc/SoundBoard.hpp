@@ -10,9 +10,9 @@ public:
     SoundBoard();
 
     void init(std::string &file);
-
-private:
     void run();
+    
+private:
     Config configFile;
     SoundManager audioManager;
 };

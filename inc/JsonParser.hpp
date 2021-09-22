@@ -10,26 +10,32 @@
 
 namespace pt = boost::property_tree;
 
+enum TransferProtocol
+{
+    bluetooth,
+    netcat
+};
+
+struct ConfigData
+{
+    std::map<int, std::string> pathById;
+    int transferProtocol = -1;
+    int buttonCount = -1;
+};
+
+
 class JsonParser
 {
 public:
     JsonParser(const std::string &filename);
 
-    std::string getSoundPathByButtonID(int id);
-    int getProtocol() const;
-    
-    int getButtonCount() const;
-    std::map<int,std::string> getConfig();
+    ConfigData& getConfigData();
 
 private:
     JsonParser();
     void init();
-    // map[2] = "path/to/sound2"
-    std::map<int, std::string> pathById;
+
     pt::ptree root;
-   
-    //  0 = bluetooth   1 = netcat
-    int transferProtocol = 0;
-    int buttonCount = 0;
+    ConfigData data;
 };
 #endif

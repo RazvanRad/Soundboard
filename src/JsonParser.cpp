@@ -5,57 +5,49 @@ JsonParser::JsonParser(const std::string &filename)
     if (filename.length() > 0)
     {
         pt::read_json(filename, root);
-        init();
     }
     else
     {
-        JsonParser();
-    }
-}
-std::map<int,std::string> JsonParser::getConfig()
-{
-    return pathById;
-}
-std::string JsonParser::getSoundPathByButtonID(int id)
-{
-    if (pathById.find(id) != pathById.end())
-    {
-        return pathById[id];
-    }
-    //if we get here the button does not exist
-    if (!pathById.empty())
-    {
-        return("");
-        
-    }
-    //if we get here the map is empty
-    return("");
-}
+        printf("No file name given to json parser");
 
-int JsonParser::getProtocol() const
-{
-    return transferProtocol;
+        pt::read_json("default.json", root);
+    }
+    init();
 }
-
 JsonParser::JsonParser()
 {
-    pt::read_json("default.json", root);
-    init();
 }
 
 void JsonParser::init()
 {
+
     for (pt::ptree::value_type &btn : root.get_child("buttonID"))
     {
         int val = stoi(btn.first);
         std::string path = btn.second.data();
 
-        pathById.insert(std::make_pair(val, path));
-        buttonCount++;
+        data.pathById.insert(std::make_pair(val, path));
+        data.buttonCount++;
+    }
+
+    std::string protocol = root.get<std::string>("transferProtocol", "");
+
+    if (protocol == "bluetooth")
+    {
+        data.transferProtocol = bluetooth;
+    }
+    else if (protocol == "netcat")
+    {
+        data.transferProtocol = netcat;
+    }
+    else
+    {
+        printf("Protocol not found!");
     }
 }
 
-int JsonParser::getButtonCount() const
+ConfigData &JsonParser::getConfigData()
 {
-    return buttonCount;
+
+    return data;
 }
