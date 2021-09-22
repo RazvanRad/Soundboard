@@ -4,10 +4,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_mixer.h>
+
 #include <IPlayer.hpp>
 #include <Config.hpp>
+
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_mixer.h>
 
 #define AUDIO_RATE 22050
 #define AUDIO_FORMAT AUDIO_S16SYS
