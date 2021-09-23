@@ -6,7 +6,7 @@ SoundBoard::SoundBoard() {}
 
 void playSound(int i)
 {
-    SoundManager::playSound(i);
+    SoundManager::playSound(i-49);
 }
 
 void SoundBoard::run()

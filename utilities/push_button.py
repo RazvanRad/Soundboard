@@ -4,24 +4,24 @@ import bluetooth
 
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 #TODO add address and port in config
-sock.connect(("FC:F8:AE:60:81:63",1))
+sock.connect(("48:51:B7:1D:6E:2D",1))
 
 button_pressed="-1" 
 
 def pressed1():
     button_pressed = 1
     print(button_pressed)
-    sock.send("Pressed1")
+    sock.send("1")
     
 def pressed2():
     button_pressed = 2
     print(button_pressed)
-    sock.send("Pressed2")
+    sock.send("2")
 
 def pressed3():
     button_pressed = 3
     print(button_pressed)
-    sock.send("Pressed3")
+    sock.send("3")
  
 button1 = gpiozero.Button(18) # GPIO17 connects to button 
 button2 = gpiozero.Button(2)
