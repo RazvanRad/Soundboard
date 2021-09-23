@@ -15,6 +15,7 @@ public:
     void start(Handler handler);
     void stop();
     int active() const;
+    int init();
 };
 
 #endif

@@ -9,7 +9,7 @@ int main()
     std::string file = "config.json";
 
     SoundBoard soundboard;
-    soundboard.init(file);
+    //soundboard.init(file);
     
     soundboard.run();
 }
