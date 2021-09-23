@@ -7,7 +7,7 @@
 
 int main()
 {
-    std::string file = "config.json";
+    std::string file = "../config.json";
 
 
     SoundBoard soundboard;
