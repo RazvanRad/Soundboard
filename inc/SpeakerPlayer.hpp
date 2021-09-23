@@ -4,10 +4,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_mixer.h>
+
 #include <IPlayer.hpp>
 #include <Config.hpp>
+
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_mixer.h>
 
 #define AUDIO_RATE 22050
 #define AUDIO_FORMAT AUDIO_S16SYS
@@ -23,7 +25,7 @@ private:
 public:
     SpeakerPlayer();
     ~SpeakerPlayer();
-    void init(const std::string &path);
+    void init(Config conf);
     Mix_Chunk *getSoundById(int index);
     virtual void playSound(int index);
 };

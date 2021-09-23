@@ -4,27 +4,27 @@
 void Config::loadConfig(std::string &filename)
 {
     JsonParser parsedInfo(filename);
-    data = parsedInfo.getConfigData();
+    init(parsedInfo);
 }
 
 int Config::getProtocol() const
 {
-    return data.transferProtocol;
+    return transferProtocol;
 }
 
 int Config::getButtonCount() const
 {
-    return data.buttonCount;
+    return buttonCount;
 }
 
 std::string Config::getSoundPathByButtonID(int id)
 {
-    if (data.pathById.find(id) != data.pathById.end())
+    if (pathById.find(id) != pathById.end())
     {
-        return data.pathById[id];
+        return pathById[id];
     }
     //if we get here the button does not exist
-    if (!data.pathById.empty())
+    if (!pathById.empty())
     {
         return ("");
     }
@@ -34,5 +34,45 @@ std::string Config::getSoundPathByButtonID(int id)
 
 int Config::getBluetoothPort() const
 {
-    return data.bluetoothPort;
+    return bluetoothPort;
+}
+
+std::vector<std::string> Config::getPlayers() const
+{
+    return players;
+}
+
+void Config::init(JsonParser info)
+{
+
+    for (pt::ptree::value_type &btn : info.getPtree().get_child("buttonID"))
+    {
+        int val = stoi(btn.first);
+        std::string path = btn.second.data();
+
+        pathById.insert(std::make_pair(val, path));
+        buttonCount++;
+    }
+
+    std::string protocol = info.getPtree().get<std::string>("transferProtocol", "");
+
+    if (protocol == "bluetooth")
+    {
+        transferProtocol = bluetooth;
+    }
+    else if (protocol == "netcat")
+    {
+        transferProtocol = netcat;
+    }
+    else
+    {
+        printf("Protocol not found!");
+    }
+
+    bluetoothPort = info.getPtree().get<int>("bluetoothPort", 1);
+
+    for (pt::ptree::value_type &element : info.getPtree().get_child("player"))
+    {
+        players.push_back(element.second.data());
+    }
 }
