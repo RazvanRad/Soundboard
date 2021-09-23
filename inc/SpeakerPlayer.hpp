@@ -25,7 +25,7 @@ private:
 public:
     SpeakerPlayer();
     ~SpeakerPlayer();
-    void init(const std::string &path);
+    void init(Config conf);
     Mix_Chunk *getSoundById(int index);
     virtual void playSound(int index);
 };
