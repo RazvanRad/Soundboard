@@ -1,9 +1,9 @@
 {
 
 	"buttonID": {
-		"1": "~/Music/Applause",
-		"2": "~/Music/Dog",
-		"3": "~/Music/Drum"
+		"1": "/usr/local/audio/Applause.wav",
+		"2": "/usr/local/audio/Dog.wav",
+		"3": "/usr/local/audio/Drum.wav"
 
 	},
 

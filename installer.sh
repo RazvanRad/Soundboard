@@ -1,7 +1,8 @@
 #!/bin/bash
 
 copy_music(){
-    cp $(dirname ${MY_PATH})/media/* ~/Music
+    sudo mkdir /usr/local/audio
+    sudo cp $(dirname ${MY_PATH})/media/* /usr/local/audio
 }
 
 unzip_sdl(){
