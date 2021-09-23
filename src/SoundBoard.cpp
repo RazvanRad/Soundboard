@@ -1,7 +1,6 @@
 #include <SoundBoard.hpp>
-#include <iostream>
-
 #include <BluetoothListener.hpp>
+#include <iostream>
 
 SoundBoard::SoundBoard() {}
 
@@ -14,6 +13,15 @@ void SoundBoard::run()
 {
     //obiect bluetooth listener
     BluetoothListener listener;
+    if (listener.init())
+    {
+        std::cout << "Bluetooth device was not initialized " << std::endl;
+    }
+    else
+    {
+        std::cout << "Bluetooth listener was initialized successfully" << std::endl;
+    }
+    //listener.start(ptf);
 
     //Implement playSound (pt stefan)
     listener.start(playSound);

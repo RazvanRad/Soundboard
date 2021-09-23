@@ -54,3 +54,6 @@ temp/
 
 build/
 build/**
+
+doc/
+doc/**
