@@ -61,10 +61,6 @@ void Config::init(JsonParser info)
     {
         transferProtocol = bluetooth;
     }
-    else if (protocol == "netcat")
-    {
-        transferProtocol = netcat;
-    }
     else
     {
         printf("Protocol not found!");

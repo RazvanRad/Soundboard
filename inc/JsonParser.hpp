@@ -13,7 +13,6 @@ namespace pt = boost::property_tree;
 enum TransferProtocol
 {
     bluetooth,
-    netcat
 };
 /**
  * Used by Config
