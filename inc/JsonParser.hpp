@@ -15,14 +15,22 @@ enum TransferProtocol
     bluetooth,
     netcat
 };
-
+/**
+ * Used by Config
+ * 
+ */
 class JsonParser
 {
 public:
+    /**
+     * @brief Opens the file and parses the Json
+     */
     JsonParser(const std::string &filename);
+    
     pt::ptree& getPtree();
 private:
     JsonParser(); 
+    
     pt::ptree root;
 };
 #endif

@@ -5,11 +5,15 @@
 #include <string>
 
 #include <JsonParser.hpp>
-
+/**
+ * Stores the information found in Json
+ */
 class Config
 {
-
 public:
+    /**
+    * @brief Calls the init function
+    */
     void loadConfig(std::string &filename);
 
     std::string getSoundPathByButtonID(int id);
@@ -19,6 +23,10 @@ public:
     std::vector<std::string> getPlayers() const;
 
 private:
+    
+    /**
+     * @brief Use the parsed information to set everything 
+    */
     void init(JsonParser info);
 
     std::map<int, std::string> pathById;
