@@ -1,18 +1,18 @@
-#include <SoundBoard.hpp>
 #include <BluetoothListener.hpp>
+#include <SoundBoard.hpp>
 #include <iostream>
 
 SoundBoard::SoundBoard() {}
 
 void playSound(int i)
 {
-    SoundManager::playSound(i-49);
+    SoundManager::playSound(i - 49);
 }
 
 void SoundBoard::run()
 {
     //obiect bluetooth listener
-    BluetoothListener listener;
+    BluetoothListener listener(configFile.getBluetoothPort());
     if (listener.init())
     {
         std::cout << "Bluetooth device was not initialized " << std::endl;
@@ -21,9 +21,7 @@ void SoundBoard::run()
     {
         std::cout << "Bluetooth listener was initialized successfully" << std::endl;
     }
-    //listener.start(ptf);
 
-    //Implement playSound (pt stefan)
     listener.start(playSound);
 
     while (true)

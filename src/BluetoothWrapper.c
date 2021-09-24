@@ -1,28 +1,23 @@
 #include <BluetoothWrapper.h>
 
-#include <unistd.h>
-#include <sys/socket.h>
 #include <bluetooth/bluetooth.h>
 #include <bluetooth/rfcomm.h>
 #include <bluetooth/sdp.h>
 #include <bluetooth/sdp_lib.h>
+#include <sys/socket.h>
+#include <unistd.h>
 
-void start_socket(void (*handler)(int), int *active)
+void start_socket(void (*handler)(int), int *active, int port)
 {
-    /*while(*active)
-    {
-        handler(121);
-    }
-    return;*/
-    struct sockaddr_rc loc_addr = { 0 }, rem_addr = { 0 };
-    char buf[1024] = { 0 };
+    struct sockaddr_rc loc_addr = {0}, rem_addr = {0};
+    char buf[1024] = {0};
     int s, client, bytes_read;
     socklen_t opt = sizeof(rem_addr);
 
     s = socket(AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM);
     loc_addr.rc_family = AF_BLUETOOTH;
     loc_addr.rc_bdaddr = *BDADDR_ANY;
-    loc_addr.rc_channel = (uint8_t)1;
+    loc_addr.rc_channel = (uint8_t)port;
     bind(s, (struct sockaddr *)&loc_addr, sizeof(loc_addr));
 
     listen(s, 1);
@@ -36,7 +31,8 @@ void start_socket(void (*handler)(int), int *active)
         memset(buf, 0, sizeof(buf));
 
         bytes_read = read(client, buf, sizeof(buf));
-        if (bytes_read > 0) {
+        if (bytes_read > 0)
+        {
             //printf("received [%s]\n", buf);
             handler(buf[0]);
         }

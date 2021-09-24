@@ -6,7 +6,7 @@ extern "C"
 {
 #endif
 
-    void start_socket(void (*handler)(int), int *active);
+    void start_socket(void (*handler)(int), int *active, int port);
 
 #ifdef __cplusplus
 };

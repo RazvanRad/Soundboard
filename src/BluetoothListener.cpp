@@ -1,21 +1,22 @@
-#include <BluetoothWrapper.h>
 #include <BluetoothListener.hpp>
+#include <BluetoothWrapper.h>
 
-#include <thread>
-#include <string>
-#include <iostream>
 #include <cstdlib>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <thread>
+
+BluetoothListener::BluetoothListener(int port) : port(port) {}
 
 void BluetoothListener::start(Handler handler)
 {
 
     _active = 1;
 
-    std::thread thr(start_socket, handler, &_active);
+    std::thread thr(start_socket, handler, &_active, port);
     thr.detach();
     bthread = std::move(thr);
-
 }
 
 void BluetoothListener::stop()
@@ -25,7 +26,6 @@ void BluetoothListener::stop()
 
     if (bthread.joinable())
         bthread.join();
-        
 }
 
 int BluetoothListener::isActive() const
@@ -45,7 +45,7 @@ int BluetoothListener::init()
     }
     system("sudo systemctl daemon-reload");
     system("sudo systemctl restart bluetooth");
-    if(isspace(buf[strlen(buf) - 1]))
+    if (isspace(buf[strlen(buf) - 1]))
     {
         buf[strlen(buf) - 1] = '\0';
     }
