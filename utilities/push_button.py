@@ -1,4 +1,4 @@
-#import gpiozero  # We are using GPIO pins
+import gpiozero  # We are using GPIO pins
 from signal import pause
 import bluetooth
 import json
