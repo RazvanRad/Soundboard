@@ -12,7 +12,7 @@ Makefile
 # Prerequisites
 *.d
 temp/
-
+tmp/
 # Ignore all files without extension
 *
 !*/

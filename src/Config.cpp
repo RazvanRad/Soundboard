@@ -75,4 +75,8 @@ void Config::init(JsonParser info)
     {
         players.push_back(element.second.data());
     }
+    if (players.size() == 0)
+    {
+        printf("Players not found!");
+    }
 }
