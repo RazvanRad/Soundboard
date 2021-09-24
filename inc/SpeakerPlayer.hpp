@@ -16,17 +16,49 @@
 #define AUDIO_CHANNELS 2
 #define AUDIO_BUFFERS 4096
 #define NUMBER_OF_BUTTONS 3
+
+/**
+ * @brief Class for speaker device
+ * 
+ */
 class SpeakerPlayer : public IPlayer
 {
-
 private:
-    std::vector<Mix_Chunk *> m_sounds;
+    std::vector<Mix_Chunk *> m_sounds; // store sounds that we want to play
 
 public:
+    /**
+     * @brief Construct a new Speaker Player object
+     * 
+     */
     SpeakerPlayer();
+
+    /**
+     * @brief Destroy the Speaker Player object
+     * 
+     */
     ~SpeakerPlayer();
+
+    /**
+     * @brief Populate vector of sounds
+     * 
+     * @param conf - get data from config.json
+     */
     void init(Config conf);
+
+    /**
+     * @brief Get the Sound By Id object
+     * 
+     * @param index - which sound we want to get
+     * @return Mix_Chunk* - return the sound we want to play
+     */
     Mix_Chunk *getSoundById(int index);
+
+    /**
+     * @brief Play sound
+     * 
+     * @param index - wich sound we want to play
+     */
     virtual void playSound(int index);
 };
 
