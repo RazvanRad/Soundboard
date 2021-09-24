@@ -1,0 +1,43 @@
+\hypertarget{SpeakerPlayer_8hpp_source}{}\doxysection{Speaker\+Player.\+hpp}
+\label{SpeakerPlayer_8hpp_source}\index{inc/SpeakerPlayer.hpp@{inc/SpeakerPlayer.hpp}}
+\mbox{\hyperlink{SpeakerPlayer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SOUNDBOARD\_SPEAKER\_PLAYER\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SOUNDBOARD\_SPEAKER\_PLAYER\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{IPlayer_8hpp}{IPlayer.hpp}}>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{Config_8hpp}{Config.hpp}}>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <SDL2/SDL.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <SDL2/SDL\_mixer.h>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define AUDIO\_RATE 22050}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define AUDIO\_FORMAT AUDIO\_S16SYS}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define AUDIO\_CHANNELS 2}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define AUDIO\_BUFFERS 4096}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define NUMBER\_OF\_BUTTONS 3}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{classSpeakerPlayer}{SpeakerPlayer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classIPlayer}{IPlayer}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27     std::vector<Mix\_Chunk *> m\_sounds; \textcolor{comment}{// store sounds that we want to play}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{34     \mbox{\hyperlink{classSpeakerPlayer_a940db4c026d9e7d3f2af73189bef8658}{SpeakerPlayer}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40     \mbox{\hyperlink{classSpeakerPlayer_a7f0f029c5a7796701b750dc0f8a13fa9}{\string~SpeakerPlayer}}();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSpeakerPlayer_ab399851e3e0f6ec17ecb0f506926db53}{init}}(\mbox{\hyperlink{classConfig}{Config}} \mbox{\hyperlink{namespacepush__button_abe56d0a555c21b7bebab6944158edb4e}{conf}});}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{55     Mix\_Chunk *\mbox{\hyperlink{classSpeakerPlayer_a30f55d3f1a59bab218bd8be05409db31}{getSoundById}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSpeakerPlayer_aa189bc7bb222e4157e6b10dfe855fe72}{playSound}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{63 \};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

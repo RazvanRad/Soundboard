@@ -1,0 +1,103 @@
+\hypertarget{classBluetoothListener}{}\doxysection{Bluetooth\+Listener Class Reference}
+\label{classBluetoothListener}\index{BluetoothListener@{BluetoothListener}}
+
+
+{\ttfamily \#include $<$Bluetooth\+Listener.\+hpp$>$}
+
+Inheritance diagram for Bluetooth\+Listener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBluetoothListener}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBluetoothListener_a0a3aa030d249d056378229889619fc78}{Bluetooth\+Listener}} (int port)
+\item 
+void \mbox{\hyperlink{classBluetoothListener_afb7a367ebd87ab394a10df4f60df1c7f}{start}} (\mbox{\hyperlink{IListener_8hpp_a7308ce297f5479db198be27fc3e7a79e}{Handler}} handler)
+\item 
+void \mbox{\hyperlink{classBluetoothListener_a462b0594bb11ab63e698ae768c49648b}{stop}} ()
+\item 
+int \mbox{\hyperlink{classBluetoothListener_a95d409f8f6719e68988dc51b11fe6fec}{init}} ()
+\item 
+int \mbox{\hyperlink{classBluetoothListener_a7ec43c7a374c0ae4d7f10e525ef86d55}{is\+Active}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Listens on a bluetooth socket for data represented as an integer 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBluetoothListener_a0a3aa030d249d056378229889619fc78}\label{classBluetoothListener_a0a3aa030d249d056378229889619fc78}} 
+\index{BluetoothListener@{BluetoothListener}!BluetoothListener@{BluetoothListener}}
+\index{BluetoothListener@{BluetoothListener}!BluetoothListener@{BluetoothListener}}
+\doxysubsubsection{\texorpdfstring{BluetoothListener()}{BluetoothListener()}}
+{\footnotesize\ttfamily Bluetooth\+Listener\+::\+Bluetooth\+Listener (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port that will be used by the socket \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBluetoothListener_a95d409f8f6719e68988dc51b11fe6fec}\label{classBluetoothListener_a95d409f8f6719e68988dc51b11fe6fec}} 
+\index{BluetoothListener@{BluetoothListener}!init@{init}}
+\index{init@{init}!BluetoothListener@{BluetoothListener}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Bluetooth\+Listener\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initializes the bluetooth configuration. Will run the following commands\+: ~\newline
+{\ttfamily sudo systemctl daemon-\/reload} ~\newline
+{\ttfamily sudo systemctl bluetooth restart} ~\newline
+{\ttfamily sudo hciconfig \texorpdfstring{$<$}{<}device\texorpdfstring{$>$}{>} piscan} ~\newline
+ where {\ttfamily \texorpdfstring{$<$}{<}device}\texorpdfstring{$>$}{>} is the first bluetooth device found (returned by {\ttfamily hcitool dev}) 
+
+Implements \mbox{\hyperlink{classIListener_a94b29885e49a30371494fe8a953d0a3a}{IListener}}.
+
+\mbox{\Hypertarget{classBluetoothListener_a7ec43c7a374c0ae4d7f10e525ef86d55}\label{classBluetoothListener_a7ec43c7a374c0ae4d7f10e525ef86d55}} 
+\index{BluetoothListener@{BluetoothListener}!isActive@{isActive}}
+\index{isActive@{isActive}!BluetoothListener@{BluetoothListener}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily int Bluetooth\+Listener\+::is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tells if the listener is active or not \begin{DoxyReturn}{Returns}
+0 if init was successful, other value otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIListener_a40b154c8a44fcc813a0f18dc4ffabe68}{IListener}}.
+
+\mbox{\Hypertarget{classBluetoothListener_afb7a367ebd87ab394a10df4f60df1c7f}\label{classBluetoothListener_afb7a367ebd87ab394a10df4f60df1c7f}} 
+\index{BluetoothListener@{BluetoothListener}!start@{start}}
+\index{start@{start}!BluetoothListener@{BluetoothListener}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Bluetooth\+Listener\+::start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{IListener_8hpp_a7308ce297f5479db198be27fc3e7a79e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Starts a bluetooth socket on a separate thread 
+\begin{DoxyParams}{Parameters}
+{\em handler} & Whenever the socket receives data from the client this function will be called with the respective data \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIListener_a02cd2a7b074b343a9b14be5c1b3ca929}{IListener}}.
+
+\mbox{\Hypertarget{classBluetoothListener_a462b0594bb11ab63e698ae768c49648b}\label{classBluetoothListener_a462b0594bb11ab63e698ae768c49648b}} 
+\index{BluetoothListener@{BluetoothListener}!stop@{stop}}
+\index{stop@{stop}!BluetoothListener@{BluetoothListener}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Bluetooth\+Listener\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Stops the bluetooth socket and terminates the listener thread 
+
+Implements \mbox{\hyperlink{classIListener_a288f3ad930bc90086f4e8b6578609366}{IListener}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{BluetoothListener_8hpp}{Bluetooth\+Listener.\+hpp}}\item 
+src/\mbox{\hyperlink{BluetoothListener_8cpp}{Bluetooth\+Listener.\+cpp}}\end{DoxyCompactItemize}

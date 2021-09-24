@@ -1,0 +1,25 @@
+\hypertarget{IListener_8hpp_source}{}\doxysection{IListener.\+hpp}
+\label{IListener_8hpp_source}\index{inc/IListener.hpp@{inc/IListener.hpp}}
+\mbox{\hyperlink{IListener_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SOUNDBOARD\_LISTENER\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SOUNDBOARD\_LISTENER\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{typedef} void(*\mbox{\hyperlink{IListener_8hpp_a7308ce297f5479db198be27fc3e7a79e}{Handler}})(int);}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{classIListener}{IListener}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classIListener_a02cd2a7b074b343a9b14be5c1b3ca929}{start}}(\mbox{\hyperlink{IListener_8hpp_a7308ce297f5479db198be27fc3e7a79e}{Handler}} handler) = 0;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{22     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classIListener_a288f3ad930bc90086f4e8b6578609366}{stop}}() = 0;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classIListener_a94b29885e49a30371494fe8a953d0a3a}{init}}() = 0;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classIListener_a40b154c8a44fcc813a0f18dc4ffabe68}{isActive}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,30 @@
+\hypertarget{SoundBoard_8hpp_source}{}\doxysection{Sound\+Board.\+hpp}
+\label{SoundBoard_8hpp_source}\index{inc/SoundBoard.hpp@{inc/SoundBoard.hpp}}
+\mbox{\hyperlink{SoundBoard_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SOUNDBOARD\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SOUNDBOARD\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{Config_8hpp}{Config.hpp}}>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{SoundManager_8hpp}{SoundManager.hpp}}>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classSoundBoard}{SoundBoard}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{classConfig}{Config}} configFile;         \textcolor{comment}{// the place where data from config.json are stored}}
+\DoxyCodeLine{18     \mbox{\hyperlink{classSoundManager}{SoundManager}} audioManager; \textcolor{comment}{// object used for playing sound on different devices}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{classSoundBoard_aece129689fc8e25f2148971f6f5f8737}{SoundBoard}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoundBoard_aa42a6759afec1973f1661a6d7d120c5d}{init}}(std::string \&file);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoundBoard_a4a3cf65ff529ed0554d1a942b4a74f97}{run}}();}
+\DoxyCodeLine{39 \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,34 @@
+\hypertarget{JsonParser_8hpp_source}{}\doxysection{Json\+Parser.\+hpp}
+\label{JsonParser_8hpp_source}\index{inc/JsonParser.hpp@{inc/JsonParser.hpp}}
+\mbox{\hyperlink{JsonParser_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SOUNDBOARD\_JSONPARSER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SOUNDBOARD\_JSONPARSER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <boost/property\_tree/ptree.hpp>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <boost/property\_tree/json\_parser.hpp>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }pt = boost::property\_tree;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{enum} \mbox{\hyperlink{JsonParser_8hpp_a4303a819ce6bdb3fcb36af1fdc2eebcc}{TransferProtocol}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \mbox{\hyperlink{JsonParser_8hpp_a4303a819ce6bdb3fcb36af1fdc2eebccaa778c54ac92a05c95b232eddac2e9aec}{bluetooth}},}
+\DoxyCodeLine{16     \mbox{\hyperlink{JsonParser_8hpp_a4303a819ce6bdb3fcb36af1fdc2eebcca9681081fb12825cc30670464f14bab7d}{netcat}}}
+\DoxyCodeLine{17 \};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{classJsonParser}{JsonParser}}}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{classJsonParser}{JsonParser}}(\textcolor{keyword}{const} std::string \&filename);}
+\DoxyCodeLine{23     pt::ptree\& \mbox{\hyperlink{classJsonParser_ab4ab302a8ed483d1133cb0b38d855fcb}{getPtree}}();}
+\DoxyCodeLine{24 \textcolor{keyword}{private}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{classJsonParser}{JsonParser}}(); }
+\DoxyCodeLine{26     pt::ptree root;}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

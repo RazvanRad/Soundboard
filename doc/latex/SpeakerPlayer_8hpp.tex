@@ -1,0 +1,60 @@
+\hypertarget{SpeakerPlayer_8hpp}{}\doxysection{inc/\+Speaker\+Player.hpp File Reference}
+\label{SpeakerPlayer_8hpp}\index{inc/SpeakerPlayer.hpp@{inc/SpeakerPlayer.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$IPlayer.\+hpp$>$}\newline
+{\ttfamily \#include $<$Config.\+hpp$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+mixer.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSpeakerPlayer}{Speaker\+Player}}
+\begin{DoxyCompactList}\small\item\em Class for speaker device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{SpeakerPlayer_8hpp_a5b972bafb3267e820993812beca1b298}{AUDIO\+\_\+\+RATE}}~22050
+\item 
+\#define \mbox{\hyperlink{SpeakerPlayer_8hpp_a25ef1d957093181c04182f3c55f3f1ea}{AUDIO\+\_\+\+FORMAT}}~AUDIO\+\_\+\+S16\+SYS
+\item 
+\#define \mbox{\hyperlink{SpeakerPlayer_8hpp_a8fc745a0f6e356f4b79cb0ab059c40f0}{AUDIO\+\_\+\+CHANNELS}}~2
+\item 
+\#define \mbox{\hyperlink{SpeakerPlayer_8hpp_a30d170f5255e1abc71a68b64d8fff7f6}{AUDIO\+\_\+\+BUFFERS}}~4096
+\item 
+\#define \mbox{\hyperlink{SpeakerPlayer_8hpp_a8b5882947b9bdf6ffd31ba94bcc42aef}{NUMBER\+\_\+\+OF\+\_\+\+BUTTONS}}~3
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{SpeakerPlayer_8hpp_a30d170f5255e1abc71a68b64d8fff7f6}\label{SpeakerPlayer_8hpp_a30d170f5255e1abc71a68b64d8fff7f6}} 
+\index{SpeakerPlayer.hpp@{SpeakerPlayer.hpp}!AUDIO\_BUFFERS@{AUDIO\_BUFFERS}}
+\index{AUDIO\_BUFFERS@{AUDIO\_BUFFERS}!SpeakerPlayer.hpp@{SpeakerPlayer.hpp}}
+\doxysubsubsection{\texorpdfstring{AUDIO\_BUFFERS}{AUDIO\_BUFFERS}}
+{\footnotesize\ttfamily \#define AUDIO\+\_\+\+BUFFERS~4096}
+
+\mbox{\Hypertarget{SpeakerPlayer_8hpp_a8fc745a0f6e356f4b79cb0ab059c40f0}\label{SpeakerPlayer_8hpp_a8fc745a0f6e356f4b79cb0ab059c40f0}} 
+\index{SpeakerPlayer.hpp@{SpeakerPlayer.hpp}!AUDIO\_CHANNELS@{AUDIO\_CHANNELS}}
+\index{AUDIO\_CHANNELS@{AUDIO\_CHANNELS}!SpeakerPlayer.hpp@{SpeakerPlayer.hpp}}
+\doxysubsubsection{\texorpdfstring{AUDIO\_CHANNELS}{AUDIO\_CHANNELS}}
+{\footnotesize\ttfamily \#define AUDIO\+\_\+\+CHANNELS~2}
+
+\mbox{\Hypertarget{SpeakerPlayer_8hpp_a25ef1d957093181c04182f3c55f3f1ea}\label{SpeakerPlayer_8hpp_a25ef1d957093181c04182f3c55f3f1ea}} 
+\index{SpeakerPlayer.hpp@{SpeakerPlayer.hpp}!AUDIO\_FORMAT@{AUDIO\_FORMAT}}
+\index{AUDIO\_FORMAT@{AUDIO\_FORMAT}!SpeakerPlayer.hpp@{SpeakerPlayer.hpp}}
+\doxysubsubsection{\texorpdfstring{AUDIO\_FORMAT}{AUDIO\_FORMAT}}
+{\footnotesize\ttfamily \#define AUDIO\+\_\+\+FORMAT~AUDIO\+\_\+\+S16\+SYS}
+
+\mbox{\Hypertarget{SpeakerPlayer_8hpp_a5b972bafb3267e820993812beca1b298}\label{SpeakerPlayer_8hpp_a5b972bafb3267e820993812beca1b298}} 
+\index{SpeakerPlayer.hpp@{SpeakerPlayer.hpp}!AUDIO\_RATE@{AUDIO\_RATE}}
+\index{AUDIO\_RATE@{AUDIO\_RATE}!SpeakerPlayer.hpp@{SpeakerPlayer.hpp}}
+\doxysubsubsection{\texorpdfstring{AUDIO\_RATE}{AUDIO\_RATE}}
+{\footnotesize\ttfamily \#define AUDIO\+\_\+\+RATE~22050}
+
+\mbox{\Hypertarget{SpeakerPlayer_8hpp_a8b5882947b9bdf6ffd31ba94bcc42aef}\label{SpeakerPlayer_8hpp_a8b5882947b9bdf6ffd31ba94bcc42aef}} 
+\index{SpeakerPlayer.hpp@{SpeakerPlayer.hpp}!NUMBER\_OF\_BUTTONS@{NUMBER\_OF\_BUTTONS}}
+\index{NUMBER\_OF\_BUTTONS@{NUMBER\_OF\_BUTTONS}!SpeakerPlayer.hpp@{SpeakerPlayer.hpp}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_BUTTONS}{NUMBER\_OF\_BUTTONS}}
+{\footnotesize\ttfamily \#define NUMBER\+\_\+\+OF\+\_\+\+BUTTONS~3}
+

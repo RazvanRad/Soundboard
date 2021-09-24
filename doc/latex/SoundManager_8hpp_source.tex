@@ -1,0 +1,27 @@
+\hypertarget{SoundManager_8hpp_source}{}\doxysection{Sound\+Manager.\+hpp}
+\label{SoundManager_8hpp_source}\index{inc/SoundManager.hpp@{inc/SoundManager.hpp}}
+\mbox{\hyperlink{SoundManager_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SOUNDBOARD\_SOUND\_MANAGER\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SOUNDBOARD\_SOUND\_MANAGER\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Config_8hpp}{Config.hpp}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{IPlayer_8hpp}{IPlayer.hpp}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{MicrophonePlayer_8hpp}{MicrophonePlayer.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{SpeakerPlayer_8hpp}{SpeakerPlayer.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <boost/algorithm/string.hpp>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classSoundManager}{SoundManager}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18    \textcolor{keyword}{static} std::vector<IPlayer *> players; \textcolor{comment}{// store devices}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26    \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoundManager_a50a1895e8cd1e9da7f13203cb4fa4f33}{init}}(\mbox{\hyperlink{classConfig}{Config}} \mbox{\hyperlink{namespacepush__button_abe56d0a555c21b7bebab6944158edb4e}{conf}});}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{33    \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classSoundManager_ae4ecf56157f69f36dff43f2342e7c42d}{playSound}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

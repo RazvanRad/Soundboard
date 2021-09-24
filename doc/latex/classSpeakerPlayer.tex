@@ -1,0 +1,117 @@
+\hypertarget{classSpeakerPlayer}{}\doxysection{Speaker\+Player Class Reference}
+\label{classSpeakerPlayer}\index{SpeakerPlayer@{SpeakerPlayer}}
+
+
+Class for speaker device.  
+
+
+
+
+{\ttfamily \#include $<$Speaker\+Player.\+hpp$>$}
+
+Inheritance diagram for Speaker\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSpeakerPlayer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSpeakerPlayer_a940db4c026d9e7d3f2af73189bef8658}{Speaker\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Speaker Player object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSpeakerPlayer_a7f0f029c5a7796701b750dc0f8a13fa9}{$\sim$\+Speaker\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Speaker Player object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSpeakerPlayer_ab399851e3e0f6ec17ecb0f506926db53}{init}} (\mbox{\hyperlink{classConfig}{Config}} conf)
+\begin{DoxyCompactList}\small\item\em Populate vector of sounds. \end{DoxyCompactList}\item 
+Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{classSpeakerPlayer_a30f55d3f1a59bab218bd8be05409db31}{get\+Sound\+By\+Id}} (int index)
+\begin{DoxyCompactList}\small\item\em Get the Sound By Id object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSpeakerPlayer_aa189bc7bb222e4157e6b10dfe855fe72}{play\+Sound}} (int index)
+\begin{DoxyCompactList}\small\item\em Play sound. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for speaker device. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSpeakerPlayer_a940db4c026d9e7d3f2af73189bef8658}\label{classSpeakerPlayer_a940db4c026d9e7d3f2af73189bef8658}} 
+\index{SpeakerPlayer@{SpeakerPlayer}!SpeakerPlayer@{SpeakerPlayer}}
+\index{SpeakerPlayer@{SpeakerPlayer}!SpeakerPlayer@{SpeakerPlayer}}
+\doxysubsubsection{\texorpdfstring{SpeakerPlayer()}{SpeakerPlayer()}}
+{\footnotesize\ttfamily Speaker\+Player\+::\+Speaker\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Speaker Player object. 
+
+\mbox{\Hypertarget{classSpeakerPlayer_a7f0f029c5a7796701b750dc0f8a13fa9}\label{classSpeakerPlayer_a7f0f029c5a7796701b750dc0f8a13fa9}} 
+\index{SpeakerPlayer@{SpeakerPlayer}!````~SpeakerPlayer@{$\sim$SpeakerPlayer}}
+\index{````~SpeakerPlayer@{$\sim$SpeakerPlayer}!SpeakerPlayer@{SpeakerPlayer}}
+\doxysubsubsection{\texorpdfstring{$\sim$SpeakerPlayer()}{~SpeakerPlayer()}}
+{\footnotesize\ttfamily Speaker\+Player\+::$\sim$\+Speaker\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Speaker Player object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSpeakerPlayer_a30f55d3f1a59bab218bd8be05409db31}\label{classSpeakerPlayer_a30f55d3f1a59bab218bd8be05409db31}} 
+\index{SpeakerPlayer@{SpeakerPlayer}!getSoundById@{getSoundById}}
+\index{getSoundById@{getSoundById}!SpeakerPlayer@{SpeakerPlayer}}
+\doxysubsubsection{\texorpdfstring{getSoundById()}{getSoundById()}}
+{\footnotesize\ttfamily Mix\+\_\+\+Chunk $\ast$ Speaker\+Player\+::get\+Sound\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Get the Sound By Id object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ which sound we want to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mix\+\_\+\+Chunk$\ast$ -\/ return the sound we want to play 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSpeakerPlayer_ab399851e3e0f6ec17ecb0f506926db53}\label{classSpeakerPlayer_ab399851e3e0f6ec17ecb0f506926db53}} 
+\index{SpeakerPlayer@{SpeakerPlayer}!init@{init}}
+\index{init@{init}!SpeakerPlayer@{SpeakerPlayer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Speaker\+Player\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classConfig}{Config}}}]{conf }\end{DoxyParamCaption})}
+
+
+
+Populate vector of sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conf} & -\/ get data from config.\+json \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSpeakerPlayer_aa189bc7bb222e4157e6b10dfe855fe72}\label{classSpeakerPlayer_aa189bc7bb222e4157e6b10dfe855fe72}} 
+\index{SpeakerPlayer@{SpeakerPlayer}!playSound@{playSound}}
+\index{playSound@{playSound}!SpeakerPlayer@{SpeakerPlayer}}
+\doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
+{\footnotesize\ttfamily void Speaker\+Player\+::play\+Sound (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Play sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ wich sound we want to play \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIPlayer_acc1db8a5b605fb9c1e4155bd95613964}{IPlayer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{SpeakerPlayer_8hpp}{Speaker\+Player.\+hpp}}\item 
+src/\mbox{\hyperlink{SpeakerPlayer_8cpp}{Speaker\+Player.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\hypertarget{Config_8hpp_source}{}\doxysection{Config.\+hpp}
+\label{Config_8hpp_source}\index{inc/Config.hpp@{inc/Config.hpp}}
+\mbox{\hyperlink{Config_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SOUNDBOARD\_CONFIG\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SOUNDBOARD\_CONFIG\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{JsonParser_8hpp}{JsonParser.hpp}}>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classConfig}{Config}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{classConfig_a39a0703e819e742ece06e342d8c82aec}{loadConfig}}(std::string \&filename);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     std::string \mbox{\hyperlink{classConfig_ad361ecdb3458a43215ceb6200262adae}{getSoundPathByButtonID}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} \mbox{\hyperlink{classConfig_ae0c6e3c5e9b05a0e916af7a7b937a5e1}{getButtonCount}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{classConfig_ad2da0b56f8303d08fa096509bb38ded2}{getProtocol}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{classConfig_a95d45da7d3b89582e4a9785c2defd87b}{getBluetoothPort}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{19     std::vector<std::string> \mbox{\hyperlink{classConfig_ae3744aa995eee2c8ce8a5b32ee9c45cb}{getPlayers}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} init(\mbox{\hyperlink{classJsonParser}{JsonParser}} info);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     std::map<int, std::string> pathById;}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} transferProtocol = -\/1;}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} buttonCount = -\/1;}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} bluetoothPort = -\/1;}
+\DoxyCodeLine{28     std::vector<std::string> players;}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,3 @@
+/home/internship1/Soundboard/build/CMakeFiles/rebuild_cache.dir
+/home/internship1/Soundboard/build/CMakeFiles/soundboard_server.dir
+/home/internship1/Soundboard/build/CMakeFiles/edit_cache.dir

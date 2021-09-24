@@ -1,0 +1,82 @@
+\hypertarget{classIListener}{}\doxysection{IListener Class Reference}
+\label{classIListener}\index{IListener@{IListener}}
+
+
+{\ttfamily \#include $<$IListener.\+hpp$>$}
+
+Inheritance diagram for IListener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classIListener}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classIListener_a02cd2a7b074b343a9b14be5c1b3ca929}{start}} (\mbox{\hyperlink{IListener_8hpp_a7308ce297f5479db198be27fc3e7a79e}{Handler}} handler)=0
+\item 
+virtual void \mbox{\hyperlink{classIListener_a288f3ad930bc90086f4e8b6578609366}{stop}} ()=0
+\item 
+virtual int \mbox{\hyperlink{classIListener_a94b29885e49a30371494fe8a953d0a3a}{init}} ()=0
+\item 
+virtual int \mbox{\hyperlink{classIListener_a40b154c8a44fcc813a0f18dc4ffabe68}{is\+Active}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic interface for listeners 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIListener_a94b29885e49a30371494fe8a953d0a3a}\label{classIListener_a94b29885e49a30371494fe8a953d0a3a}} 
+\index{IListener@{IListener}!init@{init}}
+\index{init@{init}!IListener@{IListener}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual int IListener\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Initializes the listener. Will be called before start 
+
+Implemented in \mbox{\hyperlink{classBluetoothListener_a95d409f8f6719e68988dc51b11fe6fec}{Bluetooth\+Listener}}.
+
+\mbox{\Hypertarget{classIListener_a40b154c8a44fcc813a0f18dc4ffabe68}\label{classIListener_a40b154c8a44fcc813a0f18dc4ffabe68}} 
+\index{IListener@{IListener}!isActive@{isActive}}
+\index{isActive@{isActive}!IListener@{IListener}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily virtual int IListener\+::is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Tells if the listener is active or not \begin{DoxyReturn}{Returns}
+0 if init was successful, other value otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBluetoothListener_a7ec43c7a374c0ae4d7f10e525ef86d55}{Bluetooth\+Listener}}.
+
+\mbox{\Hypertarget{classIListener_a02cd2a7b074b343a9b14be5c1b3ca929}\label{classIListener_a02cd2a7b074b343a9b14be5c1b3ca929}} 
+\index{IListener@{IListener}!start@{start}}
+\index{start@{start}!IListener@{IListener}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily virtual void IListener\+::start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{IListener_8hpp_a7308ce297f5479db198be27fc3e7a79e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Starts the listener. Must be a non-\/blocking call 
+\begin{DoxyParams}{Parameters}
+{\em handler} & The function that will be called when the listener detects input \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classBluetoothListener_afb7a367ebd87ab394a10df4f60df1c7f}{Bluetooth\+Listener}}.
+
+\mbox{\Hypertarget{classIListener_a288f3ad930bc90086f4e8b6578609366}\label{classIListener_a288f3ad930bc90086f4e8b6578609366}} 
+\index{IListener@{IListener}!stop@{stop}}
+\index{stop@{stop}!IListener@{IListener}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily virtual void IListener\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Stops the listener. Should clean up any resources used by the listener 
+
+Implemented in \mbox{\hyperlink{classBluetoothListener_a462b0594bb11ab63e698ae768c49648b}{Bluetooth\+Listener}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{IListener_8hpp}{IListener.\+hpp}}\end{DoxyCompactItemize}
