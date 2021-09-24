@@ -1,10 +1,14 @@
-import gpiozero  # We are using GPIO pins
+#import gpiozero  # We are using GPIO pins
 from signal import pause
 import bluetooth
+import json
 
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-#TODO add address and port in config
-sock.connect(("80:86:F2:25:0E:AD",1))
+f = open('config.json')
+conf = json.load(f)
+print(conf)
+
+sock.connect((conf["address"],int(conf["port"])))
 
 def pressedHandler(number = ""):
     def onPressed():
